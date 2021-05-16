@@ -49,7 +49,12 @@ function Counter({id, user, initialCount}) {
                 variant="contained" 
                 color="primary"
                 onClick={countInc}
-                style={{borderRadius:'50%', height:50, width:50, backgroundColor:'green', aspectRatio:1}}
+                style={{
+                    borderRadius:'50%', 
+                    height:'85%', 
+                    width:'90%',
+                    backgroundColor:'green',
+                }}
             ></Button>
         </div>
     );

@@ -112,7 +112,7 @@ function Main({user, logout, auth}) {
                     variant="contained" 
                     color="secondary "
                     onClick={()=>{setDisplay(null)}}
-                    style={{marginTop:'40%'}}
+                    style={{marginTop:'10em'}}
                 >Go Back</Button>:<div/>
             }
         </div>
