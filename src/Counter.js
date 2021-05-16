@@ -41,6 +41,16 @@ function Counter({id, user, initialCount}) {
         })
         play()
     }
+
+    const countReset=(e)=>{
+        var itemRef=db.ref('counts/'+id)
+        var updates = {};
+        itemRef.set({
+            name:user.displayName,
+            count:0
+        })
+        play()
+    }
     return (
         <div >
             <h4>{user.displayName}</h4>
@@ -53,9 +63,22 @@ function Counter({id, user, initialCount}) {
                     borderRadius:'50%', 
                     height:'85%', 
                     width:'90%',
-                    backgroundColor:'green',
+                    backgroundColor:'light-blue',
                 }}
             ></Button>
+            <div style={{width:'100%', display:'flex', justifyContent:'flex-end'}}>
+                <Button 
+                    variant="contained" 
+                    color="primary"
+                    onClick={countReset}
+                    style={{
+                        borderRadius:'50%', 
+                        height:'5%', 
+                        width:'5%',
+                        backgroundColor:'red',
+                    }}
+                ></Button>
+            </div>
         </div>
     );
 }
